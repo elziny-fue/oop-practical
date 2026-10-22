@@ -1,0 +1,39 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package javaapplication39;
+import java.util.Scanner;
+/**
+ *
+ * @author STUDENT
+ */
+public class JavaApplication39 {
+public static double computeArea(double radius){
+    return Math.PI* radius * radius;
+}
+    public static double computeArea(double length,double width){
+        return length*width;
+}
+    public static double computeArea(double base,double height, boolean isTriangle){
+        if (isTriangle){
+            return(base*height)/2;
+        }
+        else{
+            return base*height;
+        }
+    }
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input=new Scanner(System.in);
+        System.out.println("the area of circle= "+computeArea(5.0));
+        System.out.println("the area of rectangle= "+computeArea(4.0,6.0));
+        System.out.println("the area of triangle= "+computeArea(4.0,6.0,true));
+    }
+    
+}
